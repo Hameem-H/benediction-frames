@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteNav, SiteFooter } from "@/components/site-nav";
 import hero from "@/assets/film-1.jpg";
@@ -41,25 +41,38 @@ function Films() {
     <main>
       <SiteNav />
 
-      <section className="vignette relative h-[100svh] w-full overflow-hidden">
+      <section className="relative h-[100svh] w-full overflow-hidden">
         <img
           src={hero}
-          alt="A woman standing alone in a cathedral as light falls through a high window"
+          alt="A solitary figure in still, cinematic light"
           width={1600}
           height={912}
-          className="reveal-slow h-full w-full object-cover opacity-90"
+          className="slow-zoom absolute inset-0 h-full w-full object-cover opacity-80"
         />
-        <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 md:px-12 md:pb-20">
-          <h1 className="film-title fade-up text-[13vw] leading-[0.85] md:text-[7.5vw]">
+        <div className="hero-gradient absolute inset-0 pointer-events-none" />
+
+        <div className="absolute inset-x-0 bottom-0 z-10 px-6 pb-16 md:px-10 md:pb-24">
+          <h1 className="film-title fade-up text-[14vw] leading-[0.82] text-foreground md:text-[8vw]">
             Benediction
           </h1>
-          <p className="fade-up label-caps mt-6 text-muted-foreground [animation-delay:600ms]">
-            Stories of faith, grief and grace
+          <h2 className="film-title fade-up text-[14vw] leading-[0.82] text-foreground md:text-[8vw] [animation-delay:180ms]">
+            Studios
+          </h2>
+          <p className="fade-up label-caps mt-8 text-foreground/70 [animation-delay:420ms]">
+            Independent Motion Pictures
           </p>
+          <div className="fade-up mt-10 [animation-delay:620ms]">
+            <a
+              href="#films"
+              className="label-caps inline-block border-b border-foreground/30 pb-1 text-foreground/90 transition-opacity duration-300 hover:opacity-60"
+            >
+              [ Explore Our Films ]
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="px-6 pt-28 md:px-12 md:pt-40">
+      <section id="films" className="px-6 pt-28 md:px-10 md:pt-40">
         <p className="label-caps text-gold/80">Films</p>
 
         <div className="mt-16 space-y-28 md:mt-24 md:space-y-44">
@@ -93,7 +106,7 @@ function Films() {
         </div>
       </section>
 
-      <section className="px-6 pt-40 md:px-12">
+      <section className="px-6 pt-40 md:px-10">
         <p className="film-title max-w-3xl text-3xl leading-tight text-foreground/90 md:text-5xl">
           We make small films about people who are still hoping.
         </p>
