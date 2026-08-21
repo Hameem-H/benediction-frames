@@ -78,7 +78,7 @@ function useReveal<T extends HTMLElement>(ref: React.RefObject<T | null>) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry?.isIntersecting) {
           setVisible(true);
           observer.disconnect();
         }
