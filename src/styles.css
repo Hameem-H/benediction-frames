@@ -203,3 +203,26 @@
   }
 }
 
+@utility slow-zoom {
+  animation: slow-zoom 18s ease-out forwards;
+}
+
+@keyframes slow-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+@utility hero-gradient {
+  background:
+    linear-gradient(
+      to top,
+      var(--background) 0%,
+      color-mix(in oklab, var(--background) 72%, transparent) 28%,
+      transparent 70%
+    );
+}
+
