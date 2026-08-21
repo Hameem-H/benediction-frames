@@ -2,9 +2,9 @@ import { useRef, useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteNav, SiteFooter } from "@/components/site-nav";
-import hero from "@/assets/film-1.jpg";
-import featuredStill from "@/assets/film-2.jpg";
-import film2 from "@/assets/film-2.jpg";
+import hero from "@/assets/fllm-1.jpeg";
+import featuredStill from "@/assets/film-2.jpeg";
+import film2 from "@/assets/film-2.jpeg";
 import film3 from "@/assets/film-3.jpg";
 import film4 from "@/assets/film-4.jpg";
 import film5 from "@/assets/film-5.jpg";
