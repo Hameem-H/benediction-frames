@@ -32,10 +32,10 @@ export const Route = createFileRoute("/")({
 });
 
 const films = [
-  { title: "The Quiet Hours", year: "2026", note: "Feature", src: film2 },
-  { title: "Long Road Home", year: "2025", note: "Feature", src: film3 },
-  { title: "Doorway", year: "2024", note: "Short", src: film4 },
-  { title: "Salt & Light", year: "2023", note: "Feature", src: film5 },
+  { title: "The Quiet Hours", year: "2026", src: film2 },
+  { title: "Long Road Home", year: "2025", src: film3 },
+  { title: "Doorway", year: "2024", src: film4 },
+  { title: "Salt & Light", year: "2023", src: film5 },
 ];
 
 function useScrollZoom<T extends HTMLElement>(
@@ -125,7 +125,7 @@ function Films() {
           </p>
           <div className="fade-up mt-10 [animation-delay:620ms]">
             <a
-              href="#films"
+              href="#stories"
               className="label-caps inline-block border-b border-foreground/30 pb-1 text-foreground/90 transition-opacity duration-300 hover:opacity-60"
             >
               [ Explore Our Films ]
@@ -177,34 +177,30 @@ function Films() {
         </div>
       </section>
 
-      <section id="films" className="px-6 pt-28 md:px-10 md:pt-40">
-        <p className="label-caps text-gold/80">Films</p>
+      <section id="stories" className="px-6 pt-28 md:px-10 md:pt-40">
+        <p className="label-caps text-gold/80">Our Stories</p>
 
-        <div className="mt-16 space-y-28 md:mt-24 md:space-y-44">
-          {films.map((film, i) => (
-            <article
-              key={film.title}
-              className={
-                i % 2 === 0
-                  ? "md:w-[62%]"
-                  : "md:ml-auto md:w-[46%] md:-translate-y-24"
-              }
-            >
-              <div className="overflow-hidden">
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:mt-16 md:gap-8">
+          {films.map((film) => (
+            <article key={film.title} className="group cursor-pointer">
+              <div className="relative aspect-[2/3] overflow-hidden">
                 <img
                   src={film.src}
                   alt={film.title}
-                  width={1200}
-                  height={1504}
+                  width={800}
+                  height={1200}
                   loading="lazy"
-                  className="w-full object-cover opacity-85 transition-all duration-[1400ms] ease-out hover:scale-[1.03] hover:opacity-100"
+                  className="h-full w-full object-cover opacity-90 transition-all duration-700 ease-out group-hover:scale-[1.04] group-hover:opacity-100"
                 />
+                <div className="absolute inset-0 flex items-center justify-center bg-background/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <span className="label-caps text-foreground/90">
+                    View Film <span aria-hidden="true">→</span>
+                  </span>
+                </div>
               </div>
-              <div className="mt-6 flex items-baseline justify-between gap-6">
-                <h2 className="film-title text-3xl md:text-5xl">{film.title}</h2>
-                <span className="label-caps whitespace-nowrap text-muted-foreground">
-                  {film.note} · {film.year}
-                </span>
+              <div className="mt-4 flex items-baseline justify-between gap-4">
+                <h2 className="film-title text-xl md:text-2xl">{film.title}</h2>
+                <span className="label-caps text-muted-foreground">{film.year}</span>
               </div>
             </article>
           ))}
