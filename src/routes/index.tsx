@@ -2,12 +2,9 @@ import { useRef, useState, useEffect } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteNav, SiteFooter } from "@/components/site-nav";
+import { OurStories } from "@/components/our-stories";
 import hero from "@/assets/film-1.jpeg";
 import featuredStill from "@/assets/film-2.jpeg";
-import film2 from "@/assets/film-2.jpeg";
-import film3 from "@/assets/film-3.jpg";
-import film4 from "@/assets/film-4.jpg";
-import film5 from "@/assets/film-5.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,13 +27,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Films,
 });
-
-const films = [
-  { title: "The Quiet Hours", year: "2026", src: film2 },
-  { title: "Long Road Home", year: "2025", src: film3 },
-  { title: "Doorway", year: "2024", src: film4 },
-  { title: "Salt & Light", year: "2023", src: film5 },
-];
 
 function useScrollZoom<T extends HTMLElement>(
   ref: React.RefObject<T | null>,
@@ -177,35 +167,7 @@ function Films() {
         </div>
       </section>
 
-      <section id="stories" className="px-6 pt-28 md:px-10 md:pt-40">
-        <p className="label-caps text-gold/80">Our Stories</p>
-
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:mt-16 md:gap-8">
-          {films.map((film) => (
-            <article key={film.title} className="group cursor-pointer">
-              <div className="relative aspect-[2/3] overflow-hidden">
-                <img
-                  src={film.src}
-                  alt={film.title}
-                  width={800}
-                  height={1200}
-                  loading="lazy"
-                  className="h-full w-full object-cover opacity-90 transition-all duration-700 ease-out group-hover:scale-[1.04] group-hover:opacity-100"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-background/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <span className="label-caps text-foreground/90">
-                    View Film <span aria-hidden="true">→</span>
-                  </span>
-                </div>
-              </div>
-              <div className="mt-4 flex items-baseline justify-between gap-4">
-                <h2 className="film-title text-xl md:text-2xl">{film.title}</h2>
-                <span className="label-caps text-muted-foreground">{film.year}</span>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+      <OurStories />
 
       <section className="px-6 pt-40 md:px-10">
         <p className="film-title max-w-3xl text-3xl leading-tight text-foreground/90 md:text-5xl">
