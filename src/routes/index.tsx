@@ -3,6 +3,10 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import { SiteNav, SiteFooter } from "@/components/site-nav";
 import { OurStories } from "@/components/our-stories";
+import { StudioSplit } from "@/components/studio-split";
+import { ManifestoSection } from "@/components/manifesto-section";
+import { ClosingSection } from "@/components/closing-section";
+import { TrailerModal } from "@/components/trailer-modal";
 import hero from "@/assets/film-1.jpeg";
 import featuredStill from "@/assets/film-2.jpeg";
 
@@ -87,6 +91,7 @@ function Films() {
   const featuredRef = useRef<HTMLElement>(null);
   const featuredImageRef = useRef<HTMLImageElement>(null);
   const featuredVisible = useReveal(featuredRef);
+  const [isTrailerOpen, setIsTrailerOpen] = useState(false);
   useScrollZoom(featuredImageRef);
 
   return (
@@ -158,22 +163,38 @@ function Films() {
           <p className="mt-6 max-w-xl text-foreground/80">
             A woman returns home and learns what it means to stay.
           </p>
-          <a
-            href="#trailer"
-            className="label-caps mt-8 inline-flex items-center gap-2 text-foreground/90 transition-opacity duration-300 hover:opacity-60"
+          <button
+            onClick={() => setIsTrailerOpen(true)}
+            className="label-caps mt-8 inline-flex items-center gap-2 text-foreground/90 transition-opacity duration-300 hover:opacity-60 cursor-pointer focus:outline-none"
           >
             WATCH TRAILER <span aria-hidden="true">→</span>
-          </a>
+          </button>
         </div>
       </section>
 
       <OurStories />
 
-      <section className="px-6 pt-40 md:px-10">
+      {/* Split Section: Cinematic Image + Studio Statement */}
+      <StudioSplit />
+
+      {/* Full-Screen Black Manifesto Section */}
+      <ManifestoSection />
+
+      <section className="px-6 py-24 md:px-10">
         <p className="film-title max-w-3xl text-3xl leading-tight text-foreground/90 md:text-5xl">
           We make small films about people who are still hoping.
         </p>
       </section>
+
+      {/* Closing Full-Screen Section */}
+      <ClosingSection />
+
+      <TrailerModal
+        isOpen={isTrailerOpen}
+        onClose={() => setIsTrailerOpen(false)}
+        trailerId="jHUTrZBtbkM"
+        title="The Quiet Hours"
+      />
 
       <SiteFooter />
     </main>
