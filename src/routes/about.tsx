@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { SiteNav, SiteFooter } from "@/components/site-nav";
-import portrait from "@/assets/film-2.jpeg";
-import filmmakerPic from "@/assets/film-1.jpeg";
+import portrait from "@/assets/benedict.png";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -38,7 +38,10 @@ function About() {
           WHY WE TELL STORIES.
         </h1>
         <p className="fade-up mt-8 text-xl sm:text-2xl md:text-3xl text-foreground/80 font-light leading-relaxed max-w-3xl [animation-delay:200ms]">
-          We believe cinema is at its highest form when it slows time down, strips away noise, and confronts what it means to remain human in a restless world.
+          At Benediction Studios, we believe the most powerful stories do more than entertain—they stay with you.
+          We tell stories about the human experience—faith and family, love and loss, struggle and sacrifice, failure and redemption. Stories that make us feel, make us think, and sometimes make us see ourselves differently.
+          Because when the screen goes dark and the credits begin to roll, the best stories aren't over.
+          They go home with you
         </p>
       </section>
 
@@ -65,13 +68,19 @@ function About() {
             </h2>
             <div className="space-y-6 text-foreground/80 font-light text-lg leading-relaxed">
               <p>
-                Raised in the rural American South, Benedict Dorsey began making films with borrowed cameras and non-professional actors, drawn to the quiet moments that larger productions often overlook.
+                Raised in the Charles Village section of Baltimore City, Benedict A. Dorsey began his journey as a storyteller writing stage plays and musicals. His passion for storytelling eventually moved from the stage to the screen, as he began transforming his plays into films marked by unexpected twists, complicated plots, and characters facing very human choices.
+                As an independent filmmaker, Dorsey explores faith, family, human struggle, and what happens when life pushes ordinary people beyond what they thought they could endure.
+                With seven award-winning independent films to his credit, Dorsey approaches filmmaking with a simple conviction: every story should have something to say.
+                “I make films where viewers can look at the screen and say, ‘That’s me.’ I don’t try to manipulate their emotions or rush them toward predictable endings. I want them to recognize something real.”
+                That philosophy revealed itself at the screening of his first film, The Human Web. During the film, Dorsey noticed a man get up and leave the theater. He followed him out and asked why he was leaving.
+
               </p>
               <p>
-                For over a decade, his work has focused on ordinary lives tested by quiet trials—a grief endured in silence, a promise kept through long years, or a fragile moment of unexpected redemption.
-              </p>
+                The man’s answer was simple:
+                “That’s my life up there.”
+                For Dorsey, that is why stories matter.              </p>
               <p>
-                "I make films for the viewer who needs space to breathe," says Dorsey. "We don't try to manipulate emotion or rush toward easy resolution. We invite the audience to sit, watch, and feel."
+                His latest feature, AGBARRA!, continues that journey—challenging audiences to consider just how far love, desperation, and faith can take us.
               </p>
             </div>
             <p className="label-caps text-muted-foreground text-xs pt-4">
@@ -86,7 +95,9 @@ function About() {
         <div className="max-w-5xl mx-auto">
           <p className="label-caps text-gold/80 mb-6">Our Philosophy</p>
           <h2 className="film-title text-3xl sm:text-4xl md:text-5xl leading-tight font-light text-foreground/90 mb-16">
-            A conviction that small, honest stories belong on the largest screen.
+            We shine a light into dark places to reveal the extraordinary stories hidden within ordinary lives.
+            And perhaps, along the way, we'll find yours.
+
           </h2>
 
           <div className="grid gap-12 sm:grid-cols-3 border-t border-white/10 pt-12">

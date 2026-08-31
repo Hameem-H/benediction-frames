@@ -1,19 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { films, type Film } from "@/data/films";
-import film1 from "@/assets/film-1.jpeg";
-import film2 from "@/assets/film-2.jpeg";
-import film3 from "@/assets/film-3.jpg";
-import film4 from "@/assets/film-4.jpg";
-import film5 from "@/assets/film-5.jpg";
-
-// Asset fallbacks for local dev server
-const fallbackPosters: Record<string, string> = {
-  "the-quiet-hours": film2,
-  "long-road-home": film3,
-  "doorway": film4,
-  "salt-and-light": film5,
-  "silent-grace": film1,
-};
 
 interface OurStoriesProps {
   filmList?: Film[];
@@ -43,12 +29,7 @@ export function OurStories({ filmList = films }: OurStoriesProps) {
               <div className="relative aspect-[2/3] w-full overflow-hidden bg-secondary/20">
                 <img
                   src={film.poster}
-                  onError={(e) => {
-                    const fallback = fallbackPosters[film.slug] || film1;
-                    if (e.currentTarget.src !== fallback) {
-                      e.currentTarget.src = fallback;
-                    }
-                  }}
+
                   alt={`${film.title} (${film.year}) poster`}
                   width={800}
                   height={1200}

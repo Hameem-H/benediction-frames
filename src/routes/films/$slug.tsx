@@ -53,11 +53,7 @@ function FilmDetail() {
       <section className="relative h-[100svh] w-full overflow-hidden">
         <img
           src={heroStill}
-          onError={(e) => {
-            if (e.currentTarget.src !== fallback.stills[0]) {
-              e.currentTarget.src = fallback.stills[0];
-            }
-          }}
+
           alt={`${film.title} background still`}
           className="slow-zoom absolute inset-0 h-full w-full object-cover opacity-75"
         />
@@ -166,7 +162,7 @@ function FilmDetail() {
       <TrailerModal
         isOpen={isTrailerOpen}
         onClose={() => setIsTrailerOpen(false)}
-        trailerId={film.trailerId}
+        trailerId={film.trailerId || undefined}
         title={film.title}
       />
 

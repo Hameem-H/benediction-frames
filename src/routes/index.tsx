@@ -8,7 +8,7 @@ import { ManifestoSection } from "@/components/manifesto-section";
 import { ClosingSection } from "@/components/closing-section";
 import { TrailerModal } from "@/components/trailer-modal";
 import hero from "@/assets/film-1.jpeg";
-import featuredStill from "@/assets/film-2.jpeg";
+import featuredStill from "@/assets/Agbarra.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -150,19 +150,18 @@ function Films() {
         </div>
 
         <div
-          className={`mt-10 transition-all duration-1000 ease-out ${
-            featuredVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-          }`}
+          className={`mt-10 transition-all duration-1000 ease-out ${featuredVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+            }`}
         >
           <h2 className="film-title text-[12vw] leading-[0.9] text-foreground md:text-[7vw]">
-            The Quiet Hours
+            AGBARRA
           </h2>
           <p className="label-caps mt-4 text-muted-foreground">
-            Written & Directed by Benedict Dorsey
+            Written & Directed by Benedict A. Dorsey
           </p>
-          <p className="mt-6 max-w-xl text-foreground/80">
+          {/* <p className="mt-6 max-w-xl text-foreground/80">
             A woman returns home and learns what it means to stay.
-          </p>
+          </p> */}
           <button
             onClick={() => setIsTrailerOpen(true)}
             className="label-caps mt-8 inline-flex items-center gap-2 text-foreground/90 transition-opacity duration-300 hover:opacity-60 cursor-pointer focus:outline-none"
