@@ -8,19 +8,34 @@ import route83 from "../assets/The Girl On Route.png";
 import humanWeb from "../assets/The Human Web.png";
 import yarborough from "../assets/The Yarborough Way.png";
 import agbarra from "../assets/Agbarra.png";
+import seconds from "../assets/59 Seconds.png"
+
+import agbarra1 from "../assets/agbara1.jpg"
+import agbarra2 from "../assets/agbara2.jpg"
+
+import corners1 from "../assets/4 corner1.jpg";
+import corners2 from "../assets/4 corner2.jpg";
+
+import thegirl1 from "../assets/the girl1.jpg"
+import thegirl2 from "../assets/the girl2.jpg"
+
+import humanweb1 from "../assets/The human web1.jpg"
+import humanweb2 from "../assets/the human web2.jpg"
+
+//Import stills
 
 // TYPE
 export interface Film {
   slug: string;
   title: string;
-  year: number;
+  year: number | null;
   director: string;
   description: string | null;
   trailerId: string | null;
   poster: string;
   stills: string[];
-  cast: string[];
-  runtime: string;
+  cast: string[] | null;
+  runtime: string | null;
   genre: string;
 }
 
@@ -35,7 +50,7 @@ export const films: Film[] = [
       "Once headed for Yale, C.J. Tate emerges from prison after paying the price for a crime he didn't commit. Struggling to rebuild his life, he is pulled into a dangerous web of drugs, betrayal and revenge—where every choice carries a consequence.",
     trailerId: "mCJ4O1RXnFc",
     poster: humanWeb,
-    stills: [humanWeb],
+    stills: [humanweb1, humanweb2],
     cast: ["Lloyd Watts", "Robert Franks", "Christie Pridgen", "Ivanan Vaughn", "Xiavian Brown"],
     runtime: "108 min",
     genre: "Drama",
@@ -49,7 +64,7 @@ export const films: Film[] = [
       "The haunting drama follows a mother trying to protect her 22-year-old son from a 150-year-old family curse that claims the lives of all male heirs before they turn 23. The plot centers on a conflict between turning to voodoo to reverse the curse or trusting in God.",
     trailerId: "eBeJgYi3VZQ",
     poster: fourCorners,
-    stills: [fourCorners],
+    stills: [corners1, corners2],
     cast: ["Pattrezzes Myles", "Christie M. Pridgen", "Sandra L. Jenkins", "Natalie Pullman", "Micah Canon", "Kemo Coleman", "Penny Demps", "Brett Diggs", "Chris Haley"], runtime: "115 min",
     genre: "Drama",
   },
@@ -80,18 +95,6 @@ export const films: Film[] = [
     genre: "Drama",
   },
   {
-    slug: "the-girl-on-route-83",
-    title: "The Girl On Route",
-    year: 2023,
-    director: "Benedict A. Dorsey",
-    description: null,
-    trailerId: "d4ua4NBMo2A",
-    poster: route83,
-    stills: [route83],
-    cast: ["Ayomide Adeloye", "Christie M. Pridgen", "Reginald Baskerville", "Crystal Sayles Horshaw", "Gloria Bass", "Evan Carrington"], runtime: "98 min",
-    genre: "Drama",
-  },
-  {
     slug: "the-yarboroughs-way",
     title: "The Yarborough's Way",
     year: 2020,
@@ -106,14 +109,41 @@ export const films: Film[] = [
     genre: "Drama",
   },
   {
+    slug: "the-girl-on-route-83",
+    title: "The Girl On Route",
+    year: 2023,
+    director: "Benedict A. Dorsey",
+    description: " high school senior picks up a strange woman on his way home, setting in motion a tragic accident that could destroy his future—and derail his father’s campaign for mayor. With everything their family has worked for suddenly at risk, they face an unthinkable choice: tell the truth and possibly lose everything, or protect their son with a lie that goes against everything they believe.The Girl on Route 83 asks a haunting question: Are accidents the result of human choices—or Divine desig?",
+    trailerId: "d4ua4NBMo2A",
+    poster: route83,
+    stills: [thegirl1, thegirl2],
+    cast: ["Ayomide Adeloye", "Christie M. Pridgen", "Reginald Baskerville", "Crystal Sayles Horshaw", "Gloria Bass", "Evan Carrington"], runtime: "98 min",
+    genre: "Drama",
+  },
+  {
+    slug: "59-seconds",
+    title: "59 Seconds",
+    year: 2023,
+    director: "Benedict A. Dorsey",
+    description: null,
+    trailerId: null,
+    poster: seconds,
+    stills: [seconds],
+    cast: null,
+    runtime: "98 min",
+    genre: "Drama",
+  },
+
+
+  {
     slug: "agbarra",
     title: "AGBARRA",
     year: 2026,
     director: "Benedict A. Dorsey",
-    description: null,
+    description: "When Trent’s life depends on receiving a kidney, his twin brother, Brent, promises to save him. But when Brent is suddenly unable to become the donor, desperation drives him toward a dangerous plan that challenges his faith, his family, and the limits of brotherly love. AGBARRA! is a gripping story of sacrifice, secrets, and what can happen when a man stops waiting for God to send a miracle—and decides to create one himself.",
     trailerId: "wZ3AY8mANhE",
     poster: agbarra,
-    stills: [agbarra],
+    stills: [agbarra1, agbarra2],
     cast: ["AJ", "Evan T. Carrington", "Matthew J. Murray", "Kevin Seymore", "Tanya Smith", "Olawall Kusimo", "Christie M. Pridgen", "Stanley Kidd"],
     runtime: "98 min",
     genre: "Drama",

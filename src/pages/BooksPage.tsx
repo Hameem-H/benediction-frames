@@ -22,20 +22,36 @@ export function BooksPage() {
         <h2 className="film-title text-3xl sm:text-4xl md:text-5xl text-foreground font-light text-center mb-16 sm:mb-20 tracking-wider">
           BOOKS
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 sm:gap-10 md:gap-14">
+
+        {/* IMPORTANT: NO GRID HERE */}
+        <div className="flex flex-col gap-20">
           {books.map((book) => (
-            <div key={book.title} className="flex flex-col items-center group text-center">
-              <div className="overflow-hidden w-full aspect-[2/3] max-w-[320px]">
-                <img
-                  src={book.image}
-                  alt={book.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                />
+            <div
+              key={book.title}
+              className="flex flex-col md:flex-row gap-12 items-start border-b border-border/20 pb-16"
+            >
+              {/* Image */}
+              <div className="w-full md:w-[260px] shrink-0">
+                <div className="overflow-hidden aspect-[2/3]">
+                  <img
+                    src={book.image}
+                    alt={book.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-              <h3 className="film-title mt-6 text-xl sm:text-2xl text-foreground/90 font-light tracking-wide">
-                {book.title}
-              </h3>
+
+              {/* Text */}
+              <div className="flex-1 max-w-prose">
+                <h3 className="film-title text-2xl md:text-3xl mb-4">
+                  {book.title}
+                </h3>
+
+                <p className="text-foreground/70 leading-relaxed">
+                  {book.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

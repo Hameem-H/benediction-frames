@@ -17,7 +17,7 @@ export function OurStories({ filmList = films }: OurStoriesProps) {
 
       {/* Grid: 1-2 columns mobile, 3-4 columns desktop, clean spacing */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12 md:gap-x-10 md:gap-y-16">
-        {filmList.map((film) => (
+        {[...filmList].reverse().map((film) => (
           <Link
             key={film.slug}
             to="/films/$slug"
