@@ -1,7 +1,7 @@
 // src/data/films.ts
 
 // IMPORT POSTERS
-import fourCorners from "../assets/4 CORNERS.png";
+import fourCorners from "../assets/4 Corners.jpg";
 import football from "../assets/Football.png";
 import advice from "../assets/The Advice.png";
 import route83 from "../assets/The Girl On Route.png";

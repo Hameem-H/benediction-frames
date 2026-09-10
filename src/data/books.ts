@@ -5,6 +5,7 @@ import book3 from "../assets/ripples-of-holiness.jpg";
 export interface Book {
   title: string;
   image: string;
+  description: string;
 }
 
 export interface Play {
@@ -16,21 +17,24 @@ export const books: Book[] = [
   {
     title: "Living Under an Open Heaven",
     image: book1,
+    description: "",
   },
   {
     title: "Taking But Saying Good Stuff",
     image: book2,
+    description: "",
   },
   {
     title: "Ripples of Holiness",
     image: book3,
+    description: "",
   },
 ];
 
-export const plays: Play[] = [
-  {
-    title: "B.A.D. Talking Good Stuff ",
-    youtubeId: "S0kMPbyOigw",
-  }
+// export const plays: Play[] = [
+//   {
+//     title: "B.A.D. Talking Good Stuff ",
+//     youtubeId: "S0kMPbyOigw",
+//   }
 
-];
+// ];
