@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import cinematicStill from "@/assets/film-1.jpeg";
+import cinematicStill from "@/assets/benediction.png";
 
 export function StudioSplit() {
   return (

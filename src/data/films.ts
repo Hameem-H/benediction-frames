@@ -111,7 +111,7 @@ export const films: Film[] = [
     year: 2026,
     director: "Benedict A. Dorsey",
     description: null,
-    trailerId: null,
+    trailerId: "wZ3AY8mANhE",
     poster: agbarra,
     stills: [agbarra],
     cast: ["AJ", "Evan T. Carrington", "Matthew J. Murray", "Kevin Seymore", "Tanya Smith", "Olawall Kusimo", "Christie M. Pridgen", "Stanley Kidd"],

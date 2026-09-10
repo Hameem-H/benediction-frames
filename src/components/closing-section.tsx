@@ -1,4 +1,4 @@
-import closingStill from "@/assets/film-5.jpg";
+import closingStill from "@/assets/film-5.png";
 
 export function ClosingSection() {
   return (

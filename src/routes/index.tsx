@@ -164,7 +164,7 @@ function Films() {
           </p> */}
           <button
             onClick={() => setIsTrailerOpen(true)}
-            className="label-caps mt-8 inline-flex items-center gap-2 text-foreground/90 transition-opacity duration-300 hover:opacity-60 cursor-pointer focus:outline-none"
+            className="label-caps text-xl mt-8 inline-flex items-center gap-2 text-foreground/90 transition-opacity duration-300 hover:opacity-60 cursor-pointer focus:outline-none"
           >
             WATCH TRAILER <span aria-hidden="true">→</span>
           </button>
@@ -191,8 +191,8 @@ function Films() {
       <TrailerModal
         isOpen={isTrailerOpen}
         onClose={() => setIsTrailerOpen(false)}
-        trailerId="jHUTrZBtbkM"
-        title="The Quiet Hours"
+        trailerId="wZ3AY8mANhE"
+        title="AGBARRA"
       />
 
       <SiteFooter />

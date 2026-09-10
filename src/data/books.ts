@@ -29,11 +29,8 @@ export const books: Book[] = [
 
 export const plays: Play[] = [
   {
-    title: "Stage of Redemption",
-    youtubeId: "jHUTrZBtbkM",
-  },
-  {
-    title: "The Last Confession",
-    youtubeId: "jHUTrZBtbkM",
-  },
+    title: "B.A.D. Talking Good Stuff ",
+    youtubeId: "S0kMPbyOigw",
+  }
+
 ];

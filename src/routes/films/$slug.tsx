@@ -7,7 +7,7 @@ import film1 from "@/assets/film-1.jpeg";
 import film2 from "@/assets/film-2.jpeg";
 import film3 from "@/assets/film-3.jpg";
 import film4 from "@/assets/film-4.jpg";
-import film5 from "@/assets/film-5.jpg";
+import film5 from "@/assets/film-5.png";
 
 const fallbackMap: Record<string, { poster: string; stills: string[] }> = {
   "the-quiet-hours": { poster: film2, stills: [film1, film3] },
@@ -81,7 +81,7 @@ function FilmDetail() {
           <div className="fade-up mt-8 [animation-delay:300ms]">
             <button
               onClick={() => setIsTrailerOpen(true)}
-              className="label-caps inline-flex items-center gap-2 border-b border-foreground/30 pb-1 text-foreground/90 transition-opacity duration-300 hover:opacity-60 cursor-pointer focus:outline-none"
+              className="label-caps text-xl inline-flex items-center gap-2 border-b border-foreground/30 pb-1 text-foreground/90 transition-opacity duration-300 hover:opacity-60 cursor-pointer focus:outline-none"
             >
               WATCH TRAILER <span aria-hidden="true">→</span>
             </button>
