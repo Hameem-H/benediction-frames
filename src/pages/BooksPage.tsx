@@ -1,5 +1,5 @@
 import { SiteNav, SiteFooter } from "@/components/site-nav";
-import { books, plays } from "@/data/books";
+import { books } from "@/data/books";
 
 export function BooksPage() {
   return (
@@ -42,7 +42,7 @@ export function BooksPage() {
       </section>
 
       {/* SECTION 3 — PLAYS */}
-      <section className="px-6 py-24 md:px-12 md:py-32 max-w-[900px] mx-auto border-t border-border/20 text-center">
+      {/* <section className="px-6 py-24 md:px-12 md:py-32 max-w-[900px] mx-auto border-t border-border/20 text-center">
         <h2 className="film-title text-3xl sm:text-4xl md:text-5xl text-foreground font-light mb-16 sm:mb-20 tracking-wider">
           PLAYS
         </h2>
@@ -64,7 +64,7 @@ export function BooksPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <SiteFooter />
     </main>
